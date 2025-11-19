@@ -12,7 +12,7 @@
 	<artifactId>dnd-catalog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dnd-catalog</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Spring boot Back-end Dnd Catalog</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -61,6 +61,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!-- Springdoc OpenAPI (Generador de documentación OpenAPI con Swagger UI) -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<!-- Spring Boot Actuator (para monitoreo y métricas) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 	</dependencies>
 

@@ -28,6 +28,12 @@ public class CharacterEntity {
     @Column(nullable = false)
     private Short level;
 
+    @Column(name = "background", nullable = true)
+    private String background;
+
+    @Column(name = "alignment", nullable = false)
+    private String alignment;
+
     @Column(name = "experience", nullable = false)
     private Integer experience;
 
@@ -39,6 +45,20 @@ public class CharacterEntity {
 
     @Column(name = "initiative_misc", nullable = false)
     private Short initiativeMisc;
+
+    @Column(name = "notes", nullable = true)
+    private String notes;
+
+    @Column(name = "grp" , nullable = true)
+    private String grp;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "chrt_id", nullable = false)
+    private CharacterTypeEntity characterType;  // Relación con la entidad de tipo de personaje
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "party_id", nullable = true)
+    private PartyEntity party;  // Relación con la entidad de la party
 
     @Column(name = "created_at", nullable = false)
     private OffsetDateTime createdAt;

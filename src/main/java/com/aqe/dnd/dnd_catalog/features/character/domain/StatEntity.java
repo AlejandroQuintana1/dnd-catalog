@@ -2,9 +2,9 @@ package com.aqe.dnd.dnd_catalog.features.character.domain;
 
 import java.time.OffsetDateTime;
 import jakarta.persistence.Table;
+import lombok.Data;
 
-import org.springframework.data.annotation.Id;
-
+import jakarta.persistence.Id;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -14,6 +14,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
+@Data
 @Table(name = "stats", schema = "dnd")
 public class StatEntity {
 
