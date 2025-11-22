@@ -10,17 +10,17 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "characters_types", schema = "dnd")
+@Table(name = "character_types", schema = "dnd")
 public class CharacterTypeEntity {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="chrt_id", nullable = false)
+    @Column(name = "chrt_id", nullable = false)
     private Long id;
 
-    @Column(name="code", nullable = false, unique = true)
+    @Column(name = "code", nullable = false, unique = true)
     private String code;
-    
-    @Column(name="description", nullable = true)
+
+    @Column(name = "description", nullable = true)
     private String description;
 }

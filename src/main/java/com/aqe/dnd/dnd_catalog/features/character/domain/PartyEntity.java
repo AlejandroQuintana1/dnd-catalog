@@ -17,14 +17,14 @@ import lombok.Data;
 public class PartyEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "character_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "party_id", nullable = false)
     private UUID partyId;
 
-    @Column(name = "campaing_id", nullable = true)
-    private UUID campaingId;
+    @Column(name = "campaign_id", nullable = true)
+    private UUID campaignId;
 
-    @Column(name = "name", nullable = false,unique = true)
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 
     @Column(name = "created_at", nullable = false)

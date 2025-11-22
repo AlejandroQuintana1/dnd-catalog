@@ -8,6 +8,8 @@ import jakarta.validation.constraints.NotNull;
 @Data
 public class CharacterDTO {
 
+    private UUID id;
+
     @NotNull
     private String name;
 
@@ -38,8 +40,8 @@ public class CharacterDTO {
 
     // Relaciones
     @NotNull
-    private String characterTypeCode; 
-    private UUID partyId; 
+    private String characterTypeCode;
+    private UUID partyId;
 
     // Datos de las estadísticas
     @NotNull
